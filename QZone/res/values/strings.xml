@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Q-Zone</string>
+    <string name="action_settings">Q-Zone Settings</string>
+    <string name="active_status">Active</string>
+    <string name="inactive_status">Inactive</string>
+    <string name="ring_volume">Ringer Volume:  </string>
+    <string name="vibe_status">Vibrator Status:  </string>
+    <string name="silent_status">Silent Mode Status:  </string>
+    <string name="current_state">Current Alert Settings  </string>
+    <string name="qzone_target_name">Jeff5</string>
+    <string name="ringloud_target_name">Jeff iPad</string>
+    <string name="qzone_active">Q-Zone is now Active!</string>
+	<string name="qzone_inactive">Q-Zone is now Inactive!</string>
+	<string name="qzone_setting_title">Q-Zone Enabled?  </string>
+	<string name="interval_timing_title">Q-Zone Scan Interval (secs):  </string>
+	<string name="bluetooth_status_title">Current Bluetooth Status:  </string>
+	<string name="scanning_status">Scanning....  </string>
+	<string name="waiting_status">Waiting to scan....  </string>
+	<string name="qzone_status_title">Q-Zone Status:  </string>
+	<string name="emergency_alert">EMERGENCY ALERT!!!</string>
+	<string name="stop_alert">Stop Alert</string>
+</resources>
