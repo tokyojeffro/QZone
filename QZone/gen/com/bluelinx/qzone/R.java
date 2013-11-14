@@ -26,12 +26,15 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int qzonelargelogo=0x7f020001;
-        public static final int qzonelogo=0x7f020002;
-        public static final int qzonesmall=0x7f020003;
+        public static final int qzoneactivesplash=0x7f020001;
+        public static final int qzoneemergencyalertsplash=0x7f020002;
+        public static final int qzoneinactivesplash=0x7f020003;
+        public static final int qzonelargelogo=0x7f020004;
+        public static final int qzonelogo=0x7f020005;
+        public static final int qzonesmall=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0014;
+        public static final int action_settings=0x7f0b0015;
         public static final int bluetooth_status=0x7f0b000f;
         public static final int bluetooth_status_title=0x7f0b000e;
         public static final int current_ringVolume=0x7f0b0005;
@@ -49,12 +52,16 @@ public final class R {
         public static final int separator6=0x7f0b0010;
         public static final int silent_status=0x7f0b0009;
         public static final int silent_status_title=0x7f0b0008;
+        public static final int splashImage=0x7f0b0014;
         public static final int stopAlert=0x7f0b0013;
         public static final int vibe_status=0x7f0b000c;
         public static final int vibe_status_title=0x7f0b000b;
     }
     public static final class layout {
         public static final int activity_qzone_main=0x7f030000;
+        public static final int emergency_alert=0x7f030001;
+        public static final int inactive=0x7f030002;
+        public static final int splash=0x7f030003;
     }
     public static final class menu {
         public static final int qzone_main=0x7f0a0000;

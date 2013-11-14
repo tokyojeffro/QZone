@@ -247,6 +247,12 @@ public class QZoneService extends Service {
 				// toggling from inactive to active.  set the notifications, change ring volume, set a different timer for refresh
 				// Need to get and save current ringmode, current ring volume
 
+				// New 11/14 need to show the Q-Zone active splash screen
+				Intent splashIntent = new Intent(getApplicationContext(),QZoneSplashActivity.class);
+				splashIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(splashIntent);
+				
+				
 				// Ringer Volume
 				int currentVolume = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
 				previousRingVolume = currentVolume;
@@ -313,6 +319,11 @@ public class QZoneService extends Service {
 				
 				// put things back where they belong
 				
+				// New 11/14 need to show the Q-Zone inactive splash screen
+				Intent splashIntent = new Intent(getApplicationContext(),QZoneSplashInactiveActivity.class);
+				splashIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(splashIntent);
+				
 				// Set previous ring mode
 				mAudioManager.setRingerMode(previousRingMode);
 				
@@ -363,6 +374,11 @@ public class QZoneService extends Service {
 
 			// Make sure the mode is normal (so the notification will be audible)
 			mAudioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+			
+			// New 11/14 need to show the Q-Zone inactive splash screen
+			Intent splashIntent = new Intent(getApplicationContext(),QZoneSplashEmergencyAlertActivity.class);
+			splashIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(splashIntent);
 			
 			// New code to play notification
 			// I don't need to change the ring tone.  I can just play the notification.

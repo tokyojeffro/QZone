@@ -35,6 +35,30 @@
         <activity 
             android:name="com.bluelinx.qzone.QZonePreferencesActivity">
         </activity>
+        <activity
+            android:name="com.bluelinx.qzone.QZoneSplashActivity"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bluelinx.qzone.QZoneSplashInactiveActivity" 
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bluelinx.qzone.QZoneSplashEmergencyAlertActivity" 
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <service
             android:enabled="true"
             android:name=".QZoneService"
