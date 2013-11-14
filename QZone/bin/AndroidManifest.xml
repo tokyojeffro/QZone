@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bluelinx.qzone"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.bluelinx.qzone.QZoneMainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.VOLUME_CHANGED_ACTION" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.bluelinx.qzone.state" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.bluelinx.qzone.QZonePreferencesActivity">
+        </activity>
+        <activity
+            android:name="com.bluelinx.qzone.QZoneSplashActivity"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bluelinx.qzone.QZoneSplashInactiveActivity" 
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bluelinx.qzone.QZoneSplashEmergencyAlertActivity" 
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:enabled="true"
+            android:name=".QZoneService"
+        />
+        <receiver android:name=".QZoneAlarmReceiver">
+            <intent-filter>
+                <action
+                    android:name="com.bluelinx.qzone.ACTION_REFRESH_QZONE_ALARM"
+                />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="QZoneBluetoothIntentReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.bluetooth.device.action.FOUND"
+                />
+                <action
+                    android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED"
+                />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
